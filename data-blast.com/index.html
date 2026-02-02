@@ -190,6 +190,17 @@
             border-radius: 16px;
             border: 1px solid rgba(20, 184, 166, 0.3);
             margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .price-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .price-link:hover .price-display {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.3);
         }
 
         .price-label {
@@ -331,10 +342,12 @@
             <h2 class="section-title">Domain For Sale</h2>
             <p class="section-text">Secure this premium, brandable domain for your data analytics company, big data platform, or business intelligence service.</p>
 
-            <div class="price-display">
-                <div class="price-label">Asking Price</div>
-                <div class="price-value">€249</div>
-            </div>
+            <a href="https://sedo.com/search/details/?domain=data-blast.com" target="_blank" rel="noopener" class="price-link">
+                <div class="price-display">
+                    <div class="price-label">Asking Price</div>
+                    <div class="price-value">€249</div>
+                </div>
+            </a>
         </div>
 
         <div class="main-card">
