@@ -4,14 +4,14 @@ A collection of premium domain landing pages for sale.
 
 ## Domains
 
-| Domain | Price | Category |
-|--------|-------|----------|
-| [xr-studios.com](xr-studios.com/) | €549 | XR/VR/AR Production |
-| [xr-gaming.com](xr-gaming.com/) | €549 | VR/AR Gaming |
-| [vr-live.com](vr-live.com/) | €349 | VR Streaming & Events |
-| [gamer-guide.com](gamer-guide.com/) | €275 | Gaming Content |
-| [hair-guru.com](hair-guru.com/) | €399 | Hair & Beauty |
-| [data-blast.com](data-blast.com/) | €249 | Data Analytics |
+| Domain                              | Price | Category              |
+| ----------------------------------- | ----- | --------------------- |
+| [xr-studios.com](xr-studios.com/)   | €549  | XR/VR/AR Production   |
+| [xr-gaming.com](xr-gaming.com/)     | €549  | VR/AR Gaming          |
+| [vr-live.com](vr-live.com/)         | €349  | VR Streaming & Events |
+| [gamer-guide.com](gamer-guide.com/) | €275  | Gaming Content        |
+| [hair-guru.com](hair-guru.com/)     | €399  | Hair & Beauty         |
+| [data-blast.com](data-blast.com/)   | €249  | Data Analytics        |
 
 ## Deployment
 
