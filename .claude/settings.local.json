@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(git -C \"c:\\\\Users\\\\Mustafa\\\\Documents\\\\GitLab\\\\domain-landing-pages\" config user.name \"driftmasterde-sudo\")",
-      "Bash(cmdkey /delete:git:https://github.com)"
+      "Bash(cmdkey /delete:git:https://github.com)",
+      "Bash(gh auth:*)",
+      "Bash(cmdkey /list:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
