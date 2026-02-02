@@ -1,0 +1,64 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/data-blast.com/$1",
+      "has": [{ "type": "host", "value": "data-blast.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/data-blast.com/$1",
+      "has": [{ "type": "host", "value": "www.data-blast.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/gamer-guide.com/$1",
+      "has": [{ "type": "host", "value": "gamer-guide.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/gamer-guide.com/$1",
+      "has": [{ "type": "host", "value": "www.gamer-guide.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/hair-guru.com/$1",
+      "has": [{ "type": "host", "value": "hair-guru.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/hair-guru.com/$1",
+      "has": [{ "type": "host", "value": "www.hair-guru.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/vr-live.com/$1",
+      "has": [{ "type": "host", "value": "vr-live.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/vr-live.com/$1",
+      "has": [{ "type": "host", "value": "www.vr-live.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/xr-gaming.com/$1",
+      "has": [{ "type": "host", "value": "xr-gaming.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/xr-gaming.com/$1",
+      "has": [{ "type": "host", "value": "www.xr-gaming.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/xr-studios.com/$1",
+      "has": [{ "type": "host", "value": "xr-studios.com" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/xr-studios.com/$1",
+      "has": [{ "type": "host", "value": "www.xr-studios.com" }]
+    }
+  ]
+}
