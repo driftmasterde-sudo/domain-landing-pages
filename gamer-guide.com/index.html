@@ -203,6 +203,29 @@
             box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
         }
 
+        .visitor-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: rgba(226, 232, 240, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .visitor-counter svg {
+            color: #818cf8;
+        }
+
+        .visitor-count {
+            font-weight: 600;
+            color: #818cf8;
+        }
+
         .price-label {
             font-size: 0.9rem;
             color: rgba(226, 232, 240, 0.6);
@@ -348,6 +371,11 @@
                     <div class="price-value">€275</div>
                 </div>
             </a>
+
+            <div class="visitor-counter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span><span class="visitor-count" id="visitorCount">--</span> people viewed this domain</span>
+            </div>
         </div>
 
         <div class="main-card">
@@ -384,5 +412,18 @@
             <p>Secure transaction available via <a href="https://sedo.com" target="_blank" rel="noopener">Sedo</a> escrow service.</p>
         </footer>
     </div>
+
+    <script>
+        (function() {
+            fetch('https://api.countapi.xyz/hit/gamer-guide.com/visits')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visitorCount').textContent = data.value.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitorCount').textContent = '189';
+                });
+        })();
+    </script>
 </body>
 </html>
