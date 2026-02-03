@@ -416,23 +416,9 @@
     <script>
         (function() {
             const key = 'vc_xr-studios';
-            const baseCount = 312;
             const stored = localStorage.getItem(key);
-            const lastVisit = localStorage.getItem(key + '_last');
-            const now = Date.now();
-            let count;
-
-            if (stored) {
-                count = parseInt(stored);
-                if (!lastVisit || (now - parseInt(lastVisit)) > 1800000) {
-                    count += Math.floor(Math.random() * 3) + 1;
-                }
-            } else {
-                count = baseCount + Math.floor(Math.random() * 20);
-            }
-
+            let count = stored ? parseInt(stored) + 1 : 1;
             localStorage.setItem(key, count);
-            localStorage.setItem(key + '_last', now);
             document.getElementById('visitorCount').textContent = count.toLocaleString();
         })();
     </script>
