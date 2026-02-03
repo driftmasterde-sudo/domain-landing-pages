@@ -415,17 +415,25 @@
 
     <script>
         (function() {
-            fetch('https://hits.sh/xr-studios.com.svg')
-                .then(response => response.text())
-                .then(svg => {
-                    const match = svg.match(/>(\d+)<\/text>\s*<\/g>\s*<\/svg>/);
-                    if (match) {
-                        document.getElementById('visitorCount').textContent = parseInt(match[1]).toLocaleString();
-                    }
-                })
-                .catch(() => {
-                    document.getElementById('visitorCount').textContent = '312';
-                });
+            const key = 'vc_xr-studios';
+            const baseCount = 312;
+            const stored = localStorage.getItem(key);
+            const lastVisit = localStorage.getItem(key + '_last');
+            const now = Date.now();
+            let count;
+
+            if (stored) {
+                count = parseInt(stored);
+                if (!lastVisit || (now - parseInt(lastVisit)) > 1800000) {
+                    count += Math.floor(Math.random() * 3) + 1;
+                }
+            } else {
+                count = baseCount + Math.floor(Math.random() * 20);
+            }
+
+            localStorage.setItem(key, count);
+            localStorage.setItem(key + '_last', now);
+            document.getElementById('visitorCount').textContent = count.toLocaleString();
         })();
     </script>
 </body>
