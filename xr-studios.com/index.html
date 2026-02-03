@@ -415,10 +415,13 @@
 
     <script>
         (function() {
-            fetch('https://api.countapi.xyz/hit/xr-studios.com/visits')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('visitorCount').textContent = data.value.toLocaleString();
+            fetch('https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxr-studios.com&count_bg=%230ea5e9&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false')
+                .then(response => response.text())
+                .then(svg => {
+                    const match = svg.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+                    if (match) {
+                        document.getElementById('visitorCount').textContent = parseInt(match[2]).toLocaleString();
+                    }
                 })
                 .catch(() => {
                     document.getElementById('visitorCount').textContent = '312';
