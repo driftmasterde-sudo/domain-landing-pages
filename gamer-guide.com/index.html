@@ -415,12 +415,21 @@
 
     <script>
         (function() {
-            fetch('https://api.counterapi.dev/v1/gamer-guide-com/visits/up')
-                .then(r => r.json())
-                .then(data => {
-                    document.getElementById('visitorCount').textContent = data.count.toLocaleString();
+            fetch('https://api.counterapi.dev/v1/gamer-guide-com/visits/up', {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(r => {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.json();
                 })
-                .catch(() => {
+                .then(data => {
+                    if (data && typeof data.count === 'number') {
+                        document.getElementById('visitorCount').textContent = data.count.toLocaleString();
+                    }
+                })
+                .catch(err => {
+                    console.log('Counter error:', err);
                     document.getElementById('visitorCount').textContent = '--';
                 });
         })();
