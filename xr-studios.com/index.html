@@ -415,11 +415,14 @@
 
     <script>
         (function() {
-            const key = 'vc_xr-studios';
-            const stored = localStorage.getItem(key);
-            let count = stored ? parseInt(stored) + 1 : 1;
-            localStorage.setItem(key, count);
-            document.getElementById('visitorCount').textContent = count.toLocaleString();
+            fetch('https://api.counterapi.dev/v1/xr-studios-com/visits/up')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('visitorCount').textContent = data.count.toLocaleString();
+                })
+                .catch(() => {
+                    document.getElementById('visitorCount').textContent = '--';
+                });
         })();
     </script>
 </body>
