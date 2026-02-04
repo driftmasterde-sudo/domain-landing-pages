@@ -415,10 +415,7 @@
 
     <script>
         (function() {
-            fetch('https://api.counterapi.dev/v1/hair-guru-com/visits/up', {
-                method: 'GET',
-                headers: { 'Accept': 'application/json' }
-            })
+            fetch('/api/counter?domain=hair-guru-com')
                 .then(r => {
                     if (!r.ok) throw new Error('HTTP ' + r.status);
                     return r.json();
