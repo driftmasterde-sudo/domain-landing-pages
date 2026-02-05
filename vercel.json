@@ -20,6 +20,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/api/sitemap.xml.js" },
     { "source": "/(.*)", "destination": "/data-blast.com/$1", "has": [{ "type": "host", "value": "data-blast.com" }] },
     { "source": "/(.*)", "destination": "/data-blast.com/$1", "has": [{ "type": "host", "value": "www.data-blast.com" }] },
     { "source": "/(.*)", "destination": "/gamer-guide.com/$1", "has": [{ "type": "host", "value": "gamer-guide.com" }] },
