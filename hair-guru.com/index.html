@@ -49,7 +49,33 @@
                 "price": "399",
                 "priceCurrency": "EUR",
                 "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2026-08-31"
+                "priceValidUntil": "2026-08-31",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1
+                        }
+                    },
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0",
+                        "currency": "EUR"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "DE"
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "DE",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+                    "merchantReturnDays": 0
+                }
             }
         }
     }
