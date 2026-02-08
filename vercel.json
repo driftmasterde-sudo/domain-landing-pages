@@ -1,12 +1,4 @@
 {
-  "redirects": [
-    { "source": "/(.*)", "destination": "https://data-blast.com/$1", "has": [{ "type": "host", "value": "www.data-blast.com" }], "permanent": true },
-    { "source": "/(.*)", "destination": "https://gamer-guide.com/$1", "has": [{ "type": "host", "value": "www.gamer-guide.com" }], "permanent": true },
-    { "source": "/(.*)", "destination": "https://hair-guru.com/$1", "has": [{ "type": "host", "value": "www.hair-guru.com" }], "permanent": true },
-    { "source": "/(.*)", "destination": "https://vr-live.com/$1", "has": [{ "type": "host", "value": "www.vr-live.com" }], "permanent": true },
-    { "source": "/(.*)", "destination": "https://xr-gaming.com/$1", "has": [{ "type": "host", "value": "www.xr-gaming.com" }], "permanent": true },
-    { "source": "/(.*)", "destination": "https://xr-studios.com/$1", "has": [{ "type": "host", "value": "www.xr-studios.com" }], "permanent": true }
-  ],
   "headers": [
     {
       "source": "/sitemap.xml",
